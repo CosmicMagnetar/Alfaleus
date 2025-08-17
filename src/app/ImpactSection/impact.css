@@ -1,0 +1,104 @@
+.impact-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  color: #000;
+
+}
+
+.impact-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+}
+
+.impact-heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.impact-subtext {
+  max-width: 600px;
+  margin: 0 auto 48px auto;
+  font-size: 16px;
+  color: #000;
+}
+
+.impact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 24px;
+  width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  background-color: #3783C3;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.card-link {
+  color: #3783C3;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}

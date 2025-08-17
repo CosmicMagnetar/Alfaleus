@@ -1,0 +1,96 @@
+/* === Partnership Section === */
+.partnership-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  color: #111;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* === Logo Carousel Strip === */
+.logo-strip-wrapper {
+  width: 3586px;
+  position: relative;
+  height: 120px;
+  margin-bottom: 5rem;
+}
+
+.logo-strip {
+  display: flex;
+  gap: 180px;
+  animation: scroll-strip 10s linear infinite alternate;
+  will-change: transform;
+  padding: 1rem 0;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 100%;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+@keyframes scroll-strip {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* === Products Section === */
+.products-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.features-button {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  color: #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.features-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.products-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1.5rem 0 1rem;
+}
+
+.products-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}

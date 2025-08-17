@@ -1,0 +1,260 @@
+/* -------------------------------------------------------------------------
+   VR TIMELINE — CLEAN ALTERNATING LAYOUT MATCHING THE REFERENCE DESIGN
+--------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2.5rem;
+  font-family: "Outfit", sans-serif;
+  background: url("https://cdn.builder.io/api/v1/image/assets/TEMP/1b817f4e9dd9143aef51d0e9f8fd5a836407df16?") no-repeat center/contain;
+  overflow: hidden;
+  scrollbar-width: "none";
+}
+
+.vr-frame-timeline {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78vw;
+  max-width: 844px;
+  height: 36vw;
+  max-height: 266px;
+  background: #fff;
+  border: 4px solid #dfe6ec;
+  border-radius: 160px;
+  box-shadow: inset 0 12px 34px rgba(0, 0, 0, 0.06), 0 8px 22px rgba(0, 0, 0, 0.18), 0 0 54px rgba(32, 108, 190, 0.22);
+  overflow: hidden;
+  z-index: 5;
+}
+
+.vr-frame-timeline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+
+.timeline-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  z-index: 3;
+}
+.timeline-content::-webkit-scrollbar {
+  width: 7px;
+}
+.timeline-content::-webkit-scrollbar-thumb {
+  background: #1661b5;
+  border-radius: 4px;
+}
+
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2350px;
+}
+
+.timeline-line-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #bfd2e7;
+  z-index: 1;
+}
+
+.timeline-step {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: #d9e6f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+.timeline-step.active {
+  background: #1661b5;
+}
+
+.step-number {
+  font: 600 30px/1 "Outfit";
+  color: #000;
+}
+
+.timeline-step.active .step-number {
+  color: #fff;
+}
+
+.timeline-item {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  align-items: center;
+}
+
+.timeline-item.left .timeline-image {
+  grid-column: 1;
+  justify-content: flex-end;
+}
+.timeline-item.left .timeline-content-item {
+  grid-column: 3;
+}
+
+.timeline-item.right .timeline-image {
+  grid-column: 3;
+  justify-content: flex-start;
+}
+.timeline-item.right .timeline-content-item {
+  grid-column: 1;
+}
+
+.timeline-line-container {
+  z-index: 2;
+}
+
+.timeline-image {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-image img {
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.timeline-content-item {
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.6rem 1.6rem 1.8rem;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.timeline-date {
+  font: 600 20px/1.4 "Outfit";
+  color: #1661b5;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-description {
+  font: 400 16px/1.55 "Outfit";
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.timeline-cta {
+  display: inline-flex;
+  align-items: center;
+  font: 500 16px/1 "Outfit";
+  background: #1661b5;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.timeline-cta:hover {
+  background: #114f97;
+}
+
+.timeline-continued {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2260px;
+  background: #1661b5;
+  color: #fff;
+  font: 600 18px/1.4 "Outfit";
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}
+
+.timeline-continued:hover {
+  background: #114f97;
+}
+
+@media (max-width: 1024px) {
+  .vr-frame-timeline {
+    width: 92vw;
+    height: 42vw;
+  }
+  .timeline-content-item {
+    width: 260px;
+  }
+  .timeline-item {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vr-frame-timeline {
+    width: 96vw;
+    height: 48vw;
+  }
+  .timeline-content {
+    padding: 2rem 1.4rem;
+  }
+  .timeline-item {
+    flex-direction: column !important;
+    gap: 28px !important;
+    align-items: center;
+  }
+  .timeline-content-item {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .timeline-image img {
+    max-width: 230px;
+  }
+  .timeline-step {
+    width: 58px;
+    height: 58px;
+  }
+  .step-number {
+    font-size: 22px;
+  }
+  .timeline-continued {
+    font-size: 15px;
+    padding: 0.4rem 1rem;
+  }
+}

@@ -1,0 +1,128 @@
+.footer {
+  background: black;
+  color: white;
+  padding: 4rem 1rem 2rem;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.column p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.backToTop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.iconBtn {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.socialButtons button {
+  border: none;
+  padding: 0.8rem;
+  background: transparent;
+  box-shadow: inset 0px 1px 0px #262626;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.subscribeBox {
+  display: flex;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.subscribeBox input {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.subscribeBox button {
+  border: none;
+  background: transparent;
+  color: white;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heart {
+  color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .bottomRow {
+    flex-direction: column;
+    text-align: center;
+  }
+}

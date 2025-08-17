@@ -1,0 +1,148 @@
+.section {
+  background: white;
+  padding: 8rem 1rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  border: 1px solid #dcdcdc;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: black;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Outfit", sans-serif;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.statCard {
+  background: #f8f8f8;
+  padding: 1.75rem 4rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: black;
+}
+
+.statLabel {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Outfit", sans-serif;
+}
+
+/* Logos */
+.logoMarquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logoTrack {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 4s linear infinite alternate;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin-right: 70px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  .statCard {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.features-button {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  color: #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.features-button:hover {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,72 @@
+.blogContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input{
+  background-color: #fff;
+  color: black;
+}
+
+.blogTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blogCard {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blogCard input,
+.blogCard textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.blogCard input:focus,
+.blogCard textarea:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.blogCard label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blogCard button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.blogCard button:hover {
+  background-color: #005ec2;
+}
+
+.blogCard p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
